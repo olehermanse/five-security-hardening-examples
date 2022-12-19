@@ -1,0 +1,7 @@
+{
+  "name": "5 security hardening policy examples",
+  "type": "policy-set",
+  "description": "Showing how towrite policy enforcing security requirements",
+  "build": [],
+  "git": true
+}
