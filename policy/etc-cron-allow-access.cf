@@ -1,6 +1,7 @@
 bundle agent etc_cron_allow_access
 {
-  "/etc/cron.allow" -> { "OpenSCAP", "NIST", "CCI-000366" }
-    perms => mog("640", "root", "root"),
-    if => fileexists("$(this.promiser)");
+  files:
+    "/etc/cron.allow" -> { "OpenSCAP", "NIST", "CCI-000366" }
+      perms => mog("640", "root", "root"),
+      if => fileexists("/etc/cron.allow");
 }
