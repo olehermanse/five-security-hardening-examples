@@ -1,0 +1,11 @@
+bundle agent etc_motd
+{
+  files:
+    "/etc/motd" -> {"CCE-83737-7", "CCE-83727-8", "CCE-83337-6"}
+      perms => mog("644", "root", "root"),
+      create => "true",
+      content => "Production host:
+  Hostname: '$(sys.hostname)'
+  Maintainer: Alice@example.com
+  ";
+}

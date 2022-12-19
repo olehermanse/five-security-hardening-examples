@@ -1,0 +1,7 @@
+bundle agent delete_shosts_equiv
+{
+  files:
+    "/etc/ssh/shosts.equiv" -> { "OpenSCAP", "CCE-80513-5" }
+      delete => tidy,
+      if => fileexists("$(this.promiser)");
+}

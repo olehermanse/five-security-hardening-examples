@@ -1,0 +1,6 @@
+bundle agent uninstall_squid
+{
+  packages:
+    "squid" -> { "OpenSCAP", "CCE-80286-8" }
+      policy => "absent";
+}

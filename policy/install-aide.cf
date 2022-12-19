@@ -1,0 +1,6 @@
+bundle agent install_aide
+{
+  packages:
+    "aide" -> { "OpenSCAP", "CCE-27096-7" }
+      policy => "present";
+}
