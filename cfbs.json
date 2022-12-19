@@ -1,7 +1,7 @@
 {
   "name": "5 security hardening policy examples",
   "type": "policy-set",
-  "description": "Showing how towrite policy enforcing security requirements",
+  "description": "Showing how to write policy enforcing security requirements",
   "build": [
     {
       "name": "masterfiles",
