@@ -1,10 +1,7 @@
 bundle agent etc_motd
 {
   files:
-    "/etc/motd" -> {"CCE-83737-7", "CCE-83727-8", "CCE-83337-6"}
+    "/etc/motd" -> { "OpenSCAP", "CCE-83737-7", "CCE-83727-8", "CCE-83337-6" }
       perms => mog("644", "root", "root"),
-      content => "Production host:
-  Hostname: $(sys.host)
-  Maintainer: Alice@example.com
-  ";
+      content => "$(sys.host) - Contact: Alice@example.com";
 }
